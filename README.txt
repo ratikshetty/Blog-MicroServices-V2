@@ -1,4 +1,4 @@
-README
+﻿README
 
 Project Title:
 	Implementation of APIs in Python 3 using Flask and SQLite. 
@@ -19,6 +19,15 @@ Project Title:
 
 	All data, including error messages, should be in JSON format with the Content-Type
 	header field set to application/json, HTTP status codes, authentication.
+
+	Version 2.0:
+
+	We have implemented reverse proxy and upstreamed (Load Balancing) all five microservices using nginx.
+	Added Sydication service which generates multiple RSS feeds by utilizing four microservices we had implemented in version 1.0.
+	Syndication services fetches data using HTTP requests.
+	Moved authentication of alll the mocroservice at nginx end.
+	RSS feeds are generated using rfeed library.
+	We have seperated database of all the four microservices. 
 	
 Getting Started:
 		Prerequisites:
@@ -37,8 +46,12 @@ Installing:
 		3. Flask was installed using the command "pip install Flask"
 		4. Pytest was installed using the command "pip install -U pytest"
 		5. Tavern was installed using the command "pip install tavern[pytest]"
-		6. Foreman was installed using the command command "sudo gen install foreman"
+		6. Foreman was installed using the command "sudo gen install foreman"
 
+		Version 2.0:
+		
+		7. HTTP requests was installed using the command "pip3 install --user requests" 
+		8. Nginx was installed using the command "sudo apt install --yes nginx-extras"
 		
 
 		
